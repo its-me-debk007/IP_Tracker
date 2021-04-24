@@ -3,7 +3,8 @@ import requests
 url="http://ip-api.com/json/"
 
 try:
-    ip=input("Enter any IP Address (Don't type anything in order to find your current IP Address location)\n")
+    ip=input("Enter any IP Address (Just hit ENTER in order to find your current IP Address location)\n")
+
 finally:
     data=requests.get(url+ip).json()
     print(f'IP Address: {data["query"]}')
